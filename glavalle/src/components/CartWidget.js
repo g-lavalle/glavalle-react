@@ -1,11 +1,13 @@
-// src/components/CartWidget.js
 import React from 'react';
+import { useCart } from '../CartContext';
 
 const CartWidget = () => {
+  const { itemsCount } = useCart();
+
   return (
     <div>
       <img src="carrito.png" alt="Carrito de compras" />
-      <span>3</span> {/* Aquí puedes agregar la lógica para mostrar la cantidad de artículos en el carrito */}
+      <span>{itemsCount}</span> {/* Muestra la cantidad de artículos */}
     </div>
   );
 }
